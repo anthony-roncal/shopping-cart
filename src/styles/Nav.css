@@ -1,0 +1,53 @@
+.nav {
+    border-bottom: 1px solid grey;
+}
+
+h1 {
+    padding-left: 50px;
+}
+
+li {
+    line-height: 50px;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+.cart {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cartIcon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.cartCount {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    margin: 0;
+    background-color: rgb(0, 216, 216);
+    opacity: 100%;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 1;
+}

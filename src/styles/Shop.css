@@ -1,0 +1,9 @@
+.shop {
+    padding: 0 50px;
+}
+
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
