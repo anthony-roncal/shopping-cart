@@ -18,6 +18,18 @@ const Item = ({ name }) => {
         }
     };
 
+    const handleClickDecrement = (e) => {
+        if (quantity > 1) {
+            setQuantity(quantity - 1);
+        }
+    };
+
+    const handleClickIncrement = (e) => {
+        if (quantity < 99) {
+            setQuantity(parseInt(quantity) + 1);
+        }
+    };
+
     return (
         <div className='item'>
             <img src={fellowOde} alt='img' />
@@ -25,9 +37,9 @@ const Item = ({ name }) => {
                 <p className='item-name'>{name}</p>
                 <form className='item-form'>
                     <div className="quantity">
-                        <button type='button'>-</button>
+                        <button type='button' onClick={handleClickDecrement}>-</button>
                         <input type='number' value={quantity} onChange={handleInputChange} onBlur={handleInputBlur} maxLength='2' />
-                        <button type='button'>+</button>
+                        <button type='button' onClick={handleClickIncrement}>+</button>
                     </div>
                     <button type='button'>Add to cart</button>
                 </form>
