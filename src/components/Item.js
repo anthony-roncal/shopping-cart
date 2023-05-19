@@ -41,7 +41,7 @@ const Item = ({ name }) => {
                         <input type='number' value={quantity} onChange={handleInputChange} onBlur={handleInputBlur} maxLength='2' />
                         <button type='button' onClick={handleClickIncrement}>+</button>
                     </div>
-                    <button type='button'>Add to cart</button>
+                    <button className='add-to-cart-btn' type='button' >Add to cart</button>
                 </form>
             </div>
         </div>
