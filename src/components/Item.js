@@ -10,14 +10,13 @@ const Item = ({ name }) => {
         if (e.target.value.length > e.target.maxLength) {
             setQuantity(e.target.value.slice(0, e.target.maxLength));
         }
-    }
+    };
 
     const handleInputBlur = (e) => {
-        let value = e.target.value;
-        if (value.length === 0 || value === '0') {
+        if (e.target.value.length === 0 || e.target.value === '0') {
             setQuantity(1);
         }
-    }
+    };
 
     return (
         <div className='item'>
