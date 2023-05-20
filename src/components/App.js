@@ -6,15 +6,28 @@ import Home from './Home';
 import Shop from './Shop';
 
 const App = () => {
-  const [cartCount, setCartCount] = useState(0);
+  const [cart, setCart] = useState([]);
+  const [cartQuantity, setCartQuantity] = useState(0);
+
+  const addToCart = (item, quantity) => {
+    setCart(cart => [...cart, { item, quantity }]);
+  };
+
+  useEffect(() => {
+    let count = 0;
+    for (let i = 0; i < cart.length; i++) {
+      count += cart[i].quantity;
+    }
+    setCartQuantity(count);
+  }, [cart]);
 
   return (
     <BrowserRouter>
       <div className="App">
-        <Nav cartCount={cartCount}/>
+        <Nav cartQuantity={cartQuantity} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop" element={<Shop addToCart={addToCart} />} />
         </Routes>
       </div>
     </BrowserRouter>

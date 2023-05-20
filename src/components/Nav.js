@@ -2,7 +2,7 @@ import '../styles/Nav.css';
 import { Link } from "react-router-dom";
 import CartIcon from "./CartIcon";
 
-const Nav = ({ cartCount }) => {
+const Nav = ({ cartQuantity }) => {
     return (
         <div className='nav'>
             <h1>Logo</h1>
@@ -14,7 +14,7 @@ const Nav = ({ cartCount }) => {
                     <li>Shop</li>
                 </Link>
                 <li>
-                    <CartIcon cartCount={cartCount}/>
+                    <CartIcon cartQuantity={cartQuantity}/>
                 </li>
             </ul>
         </div>
