@@ -44,6 +44,7 @@
     display: grid;
     grid-template-columns: 1fr 80px;
     grid-template-rows: 1fr 1fr 2fr;
+    align-items: center;
 }
 
 .cart-item-info > label {

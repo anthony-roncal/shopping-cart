@@ -21,11 +21,16 @@ const Cart = ({ cartItems, cartQuantity }) => {
                 })}
             </div>
             <div className='cart-info'>
-                <div>
-                    <h3>Total</h3>
-                    <p className='total-quantity'>({cartQuantity} items)</p>
-                </div>
-                <p>${cartTotal}</p>
+                {(cartQuantity > 0) ?
+                    <>
+                        <div>
+                            <h3>Total</h3>
+                            <p className='total-quantity'>({cartQuantity} items)</p>
+                        </div>
+                        <p>${cartTotal}</p>
+                    </>
+                    : <p>Your cart is empty!</p>
+                }
             </div>
         </div>
     );

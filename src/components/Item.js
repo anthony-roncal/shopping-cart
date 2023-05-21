@@ -38,7 +38,10 @@ const Item = ({ item, addToCart }) => {
         <div className='item'>
             <img src={fellowOde} alt='img' />
             <div className="item-info">
-                <p className='item-name'>{item.name} ${item.price}</p>
+                <div className='item-name'>
+                    <p>{item.name}</p>
+                    <p>${item.price}</p>
+                </div>
                 <form className='item-form'>
                     <div className="quantity">
                         <button type='button' onClick={handleClickDecrement}>-</button>
