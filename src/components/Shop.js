@@ -4,7 +4,7 @@ import Item from './Item';
 import Cart from './Cart';
 import uniqid from 'uniqid';
 
-const Shop = ({ setCartQuantity }) => {
+const Shop = ({ cartQuantity, setCartQuantity }) => {
   const [items, setItems] = useState([
     {
       name: 'test1',
@@ -82,7 +82,7 @@ const Shop = ({ setCartQuantity }) => {
           })}
         </div>
       </div>
-      <Cart cartItems={cartItems} />
+      <Cart cartItems={cartItems} cartQuantity={cartQuantity} />
     </div>
   );
 }

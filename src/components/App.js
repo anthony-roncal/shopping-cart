@@ -14,7 +14,7 @@ const App = () => {
         <Nav cartQuantity={cartQuantity} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop setCartQuantity={setCartQuantity}/>} />
+          <Route path="/shop" element={<Shop cartQuantity={cartQuantity} setCartQuantity={setCartQuantity}/>} />
         </Routes>
       </div>
     </BrowserRouter>

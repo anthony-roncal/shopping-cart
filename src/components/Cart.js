@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import CartItem from './CartItem';
 
-const Cart = ({ cartItems }) => {
+const Cart = ({ cartItems, cartQuantity }) => {
     const [cartTotal, setCartTotal] = useState(0);
 
     useEffect(() => {
@@ -21,7 +21,10 @@ const Cart = ({ cartItems }) => {
                 })}
             </div>
             <div className='cart-info'>
-                <h3>Total</h3>
+                <div>
+                    <h3>Total</h3>
+                    <p className='total-quantity'>({cartQuantity} items)</p>
+                </div>
                 <p>${cartTotal}</p>
             </div>
         </div>

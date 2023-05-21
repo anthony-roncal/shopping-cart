@@ -33,6 +33,12 @@
     margin-top: 20px;
 }
 
+.cart-info > div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
 .cart-item-info {
     width: 100%;
     display: grid;
@@ -49,6 +55,7 @@
     font-weight: 600;
 }
 
+.total-quantity,
 .quantity {
     font-size: 14px;
 }
