@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+}
+
 .cart {
     padding-left: 30px;
     border-left: 1px solid grey;
@@ -11,6 +15,7 @@
 
 .cart-item {
     display: flex;
+    gap: 10px;
     border-bottom: 1px solid lightgrey;
     width: 100%;
     padding: 20px 0;
@@ -20,4 +25,36 @@
     width: 100px;
     height: 100px;
     object-fit: contain;
+}
+
+.cart-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cart-item-info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+
+.cart-item-info > label {
+    font-weight: 600;
+}
+
+.price {
+    text-align: right;
+    font-weight: 600;
+}
+
+.quantity {
+    font-size: 14px;
+}
+
+.price-each {
+    text-align: right;
+    font-size: 12px;
+    color: grey;
 }

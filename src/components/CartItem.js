@@ -8,10 +8,10 @@ const CartItem = ({ item, quantity }) => {
         <div className='cart-item'>
             <img src={fellowOde} alt='img'></img>
             <div className='cart-item-info'>
-                <p>{item.name}</p>
-                <p>${item.price}</p>
-                <p>Quantity: {quantity}</p>
-                {/* to-do: display price & subtotal */}
+                <label>{item.name}</label>
+                <p className='price'>${item.price * quantity}</p>
+                <p className='quantity'>Qty: {quantity}</p>
+                <p className='price-each'>(${item.price} each)</p>
             </div>
         </div>
     );

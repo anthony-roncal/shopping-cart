@@ -1,9 +1,10 @@
 .nav {
     border-bottom: 1px solid grey;
+    padding: 10px 0;
 }
 
 h1 {
-    padding-left: 50px;
+    padding-left: 30px;
 }
 
 li {
