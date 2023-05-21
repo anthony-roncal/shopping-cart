@@ -1,8 +1,8 @@
-import '../styles/Item.css';
+import '../styles/Shop.css';
 import fellowOde from '../fellow-ode.jpg';
 import { useState, useEffect } from 'react';
 
-const Item = ({ name, price, addToCart }) => {
+const Item = ({ item, addToCart }) => {
     const [quantity, setQuantity] = useState(1);
 
     const handleInputChange = (e) => {
@@ -31,21 +31,21 @@ const Item = ({ name, price, addToCart }) => {
     };
 
     const handleClickAddToCart = (e) => {
-        addToCart(e.target.dataset.name, quantity);
+        addToCart(item, quantity);
     };
 
     return (
         <div className='item'>
             <img src={fellowOde} alt='img' />
             <div className="item-info">
-                <p className='item-name'>{name} ${price}</p>
+                <p className='item-name'>{item.name} ${item.price}</p>
                 <form className='item-form'>
                     <div className="quantity">
                         <button type='button' onClick={handleClickDecrement}>-</button>
                         <input type='number' value={quantity} onChange={handleInputChange} onBlur={handleInputBlur} maxLength='2' />
                         <button type='button' onClick={handleClickIncrement}>+</button>
                     </div>
-                    <button className='add-to-cart-btn' type='button' onClick={handleClickAddToCart} data-name={name}>Add to cart</button>
+                    <button className='add-to-cart-btn' type='button' onClick={handleClickAddToCart}>Add to cart</button>
                 </form>
             </div>
         </div>

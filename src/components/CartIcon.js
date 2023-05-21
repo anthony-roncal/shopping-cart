@@ -1,11 +1,11 @@
 import cartImage from '../cart-outline.svg';
 
-const CartIcon = ({cartQuantity}) => {
+const CartIcon = ({ cartQuantity }) => {
 
     return (
-        <div className='cart'>
+        <div className='cartIcon'>
             <p className='cartQuantity'>{cartQuantity}</p>
-            <img src={cartImage} alt='cart' className='cartIcon'/>
+            <img src={cartImage} alt='cart' className='cartImg'/>
         </div>
     );
 };
