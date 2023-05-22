@@ -1,5 +1,4 @@
 import '../styles/Shop.css';
-import fellowOde from '../fellow-ode.jpg';
 import { useState, useEffect } from 'react';
 
 const Item = ({ item, addToCart }) => {
@@ -36,11 +35,12 @@ const Item = ({ item, addToCart }) => {
 
     return (
         <div className='item'>
-            <img src={fellowOde} alt='img' />
-            <div className="item-info">
-                <div className='item-name'>
-                    <p>{item.name}</p>
-                    <p>${item.price}</p>
+            <img src={require(`../images/${item.img}.png`)} alt='img' />
+            <div className="item-card">
+                <div className='item-info'>
+                    <p className='item-name'>{item.name}</p>
+                    <p className='item-price'>${item.price}</p>
+                    <p className='item-company'>{item.company}</p>
                 </div>
                 <form className='item-form'>
                     <div className="quantity">

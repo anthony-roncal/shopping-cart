@@ -1,12 +1,11 @@
 import '../styles/Cart.css';
-import fellowOde from '../fellow-ode.jpg';
 import { useState, useEffect } from 'react';
 
 const CartItem = ({ item, quantity }) => {
 
     return (
         <div className='cart-item'>
-            <img src={fellowOde} alt='img'></img>
+            <img src={require(`../images/${item.img}.png`)} alt='img' />
             <div className='cart-item-info'>
                 <label>{item.name}</label>
                 <p className='price'>${item.price * quantity}</p>

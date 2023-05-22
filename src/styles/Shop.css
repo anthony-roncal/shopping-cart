@@ -29,7 +29,7 @@ h2 {
     object-fit: contain;
 }
 
-.item-info {
+.item-card {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -37,11 +37,25 @@ h2 {
     align-items: center;
 }
 
+.item-info {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 100%;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
 .item-name {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    width: 75%;
+    font-size: 18px;
+}
+
+.item-price,
+.item-company {
+    font-weight: 700;
+}
+
+.item-company {
+    font-size: 14px;
 }
 
 .item-form {

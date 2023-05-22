@@ -25,9 +25,9 @@ const Cart = ({ cartItems, cartQuantity }) => {
                     <>
                         <div>
                             <h3>Total</h3>
-                            <p className='total-quantity'>({cartQuantity} items)</p>
+                            <p className='total-quantity'>({cartQuantity} item{(cartQuantity > 1)&&'s'})</p>
                         </div>
-                        <p>${cartTotal}</p>
+                        <p className='cart-total'>${cartTotal}</p>
                     </>
                     : <p>Your cart is empty!</p>
                 }

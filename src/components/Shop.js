@@ -7,54 +7,74 @@ import uniqid from 'uniqid';
 const Shop = ({ cartQuantity, setCartQuantity }) => {
   const [items, setItems] = useState([
     {
-      name: 'test1',
-      price: Math.ceil(Math.random() * 50),
-      id: uniqid()
+      name: 'Flatlander',
+      company: "PT's Coffee Roasting Co.",
+      price: Math.floor(Math.random() * 10) + 20,
+      id: uniqid(),
+      img: 'afqrtebpoa6w4mhhdwtx'
     },
     {
-      name: 'test2',
-      price: Math.ceil(Math.random() * 50),
-      id: uniqid()
+      name: 'Kickstart',
+      company: "Greater Goods Coffee Co.",
+      price: Math.floor(Math.random() * 10) + 20,
+      id: uniqid(),
+      img: 'nocubtg4czb5ycnonkrb'
     },
     {
-      name: 'test3',
-      price: Math.ceil(Math.random() * 50),
-      id: uniqid()
+      name: 'Milk & Honey Blend',
+      company: "Feast",
+      price: Math.floor(Math.random() * 10) + 20,
+      id: uniqid(),
+      img: 'oz8dktlpdj3xbahhkdlz'
     },
     {
-      name: 'test4',
-      price: Math.ceil(Math.random() * 50),
-      id: uniqid()
+      name: 'Familia Peixoto',
+      company: "Peixoto",
+      price: Math.floor(Math.random() * 10) + 20,
+      id: uniqid(),
+      img: 'njv69n0mnnndfvfsod1y'
     },
     {
-      name: 'test5',
-      price: Math.ceil(Math.random() * 50),
-      id: uniqid()
+      name: '71 House Blend',
+      company: "Irving Farm",
+      price: Math.floor(Math.random() * 10) + 20,
+      id: uniqid(),
+      img: 'nien9l92dj3bis3vbvof'
     },
     {
-      name: 'test6',
-      price: Math.ceil(Math.random() * 50),
-      id: uniqid()
+      name: 'High Five Blend',
+      company: "Sparrows Coffee",
+      price: Math.floor(Math.random() * 10) + 20,
+      id: uniqid(),
+      img: 'ws4dpc8rbmpft6ypixkp'
     },
     {
-      name: 'test7',
-      price: Math.ceil(Math.random() * 50),
-      id: uniqid()
+      name: 'Colorized',
+      company: "Metric",
+      price: Math.floor(Math.random() * 10) + 20,
+      id: uniqid(),
+      img: 'qescfn3ids56btix1wme'
     },
     {
-      name: 'test8',
-      price: Math.ceil(Math.random() * 50),
-      id: uniqid()
+      name: 'Rayos Del Sol',
+      company: "Panther Coffee",
+      price: Math.floor(Math.random() * 10) + 20,
+      id: uniqid(),
+      img: 'g656zaaxywbj1ccgm40l'
     },
     {
-      name: 'test9',
-      price: Math.ceil(Math.random() * 50),
-      id: uniqid()
+      name: 'City Blend',
+      company: "Oren's",
+      price: Math.floor(Math.random() * 10) + 20,
+      id: uniqid(),
+      img: 'kgk1c864zmpfju6jisur'
     },
     {
-      name: 'test10',
-      price: Math.ceil(Math.random() * 50),
-      id: uniqid()
+      name: 'Arboretum',
+      company: "Small Planes Coffee",
+      price: Math.floor(Math.random() * 10) + 20,
+      id: uniqid(),
+      img: 'oizqvvw0c5pa3ojeq5uu'
     }
   ]);
   const [cartItems, setCartItems] = useState([]);
