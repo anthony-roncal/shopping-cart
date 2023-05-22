@@ -5,7 +5,7 @@ import CartIcon from "./CartIcon";
 const Nav = ({ cartQuantity }) => {
     return (
         <div className='nav'>
-            <h1>Logo</h1>
+            <h1>Logo Coffee</h1>
             <ul className='nav-links'>
                 <Link to='/'>
                     <li>Home</li>

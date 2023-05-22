@@ -95,7 +95,7 @@ const Shop = ({ cartQuantity, setCartQuantity }) => {
   return (
     <div className="shop">
       <div>
-        <h2>Shop</h2>
+        <h2>Shop Beans</h2>
         <div className="item-container">
           {items.map(item => {
             return <Item item={item} addToCart={addToCart} key={item.id} />
