@@ -27,3 +27,7 @@ body {
     list-style-type: none;
     width: 50%;
 }
+
+.home {
+    padding: 0 30px;
+}
