@@ -4,8 +4,9 @@ import CartIcon from '../components/CartIcon';
 
 describe("CartIcon component", () => {
     it("renders correct quantity", () => {
-        render(<CartIcon cartQuantity={10} />);
-        expect(screen.getByText('10').textContent).toMatch(/10/i);
+        let randomQty = Math.ceil(Math.random() * 10);
+        render(<CartIcon cartQuantity={randomQty} />);
+        expect(screen.getByText(randomQty).textContent).toMatch(randomQty.toString());
         
     });
 

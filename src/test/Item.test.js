@@ -14,5 +14,6 @@ describe("Item component", () => {
         render(<Item item={mockItem} addToCart={jest.fn()} />);
         expect(screen.getByText('Flatlander').textContent).toMatch(/flatlander/i);
         expect(screen.getByText("PT's Coffee Roasting Co.").textContent).toMatch(/pt's coffee roasting co./i);
+        expect(screen.getByText('$' + mockItem.price).textContent).toMatch('$' + mockItem.price.toString());
     });
 });

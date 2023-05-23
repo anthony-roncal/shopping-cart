@@ -5,7 +5,7 @@ const CartItem = ({ item, quantity }) => {
 
     return (
         <div className='cart-item'>
-            <img src={require(`../images/${item.img}.png`)} alt='img' />
+            <img src={require(`../images/${item.img}.png`)} alt={item.name} />
             <div className='cart-item-info'>
                 <p>{item.name}</p>
                 <p className='price'>${item.price * quantity}</p>
