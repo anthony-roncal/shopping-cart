@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import userEvent from "@testing-library/user-event";
 import '@testing-library/jest-dom';
 import Item from '../components/Item';
 
@@ -21,5 +22,19 @@ describe("Item component", () => {
             expect(button).not.toBeInTheDocument();
         });
         expect(screen.queryByRole('input')).not.toBeInTheDocument();
+    });
+
+    it("renders form on hover", async () => {
+        const user = userEvent.setup();
+
+        render(<Item item={mockItem} addToCart={jest.fn()} />);
+        const item = screen.getByTestId('shop-item');
+
+        await user.hover(item);
+        let itemButtons = screen.queryAllByRole('button');
+        itemButtons.forEach(button => {
+            expect(button).toBeInTheDocument();
+        });
+        expect(screen.getByRole('spinbutton')).toBeInTheDocument();
     });
 });

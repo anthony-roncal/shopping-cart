@@ -43,7 +43,7 @@ const Item = ({ item, addToCart }) => {
     };
 
     return (
-        <div className='item' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div className='item' data-testid='shop-item' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <img src={require(`../images/${item.img}.png`)} alt='img' />
             <div className="item-card">
                 <div className='item-info'>
