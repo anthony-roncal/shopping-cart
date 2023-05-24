@@ -69,5 +69,6 @@ describe("Item component", () => {
 
         await user.click(addToCartBtn);
         expect(onAddToCart).toBeCalledTimes(1);
+        expect(onAddToCart).toHaveBeenCalledWith(mockItem, parseInt(screen.getByRole('spinbutton').value));
     });
 });
