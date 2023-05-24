@@ -1,6 +1,6 @@
 import '../styles/App.css';
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Nav from './Nav';
 import Home from './Home';
 import Shop from './Shop';
@@ -9,7 +9,7 @@ const App = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Nav cartQuantity={cartQuantity} />
         <Routes>
@@ -17,7 +17,7 @@ const App = () => {
           <Route path="/shop" element={<Shop cartQuantity={cartQuantity} setCartQuantity={setCartQuantity}/>} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
