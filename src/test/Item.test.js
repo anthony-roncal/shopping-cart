@@ -37,4 +37,37 @@ describe("Item component", () => {
         });
         expect(screen.getByRole('spinbutton')).toBeInTheDocument();
     });
+
+    it("increments and decrements quantity when + and - buttons are clicked", async () => {
+        const user = userEvent.setup();
+
+        render(<Item item={mockItem} addToCart={jest.fn()} />);
+        const item = screen.getByTestId('shop-item');
+
+        await user.hover(item);
+        let itemButtons = screen.queryAllByRole('button');
+        const decrementBtn = itemButtons[0];
+        const incrementBtn = itemButtons[1];
+        const quantity = screen.getByRole('spinbutton');
+
+        await user.click(incrementBtn);
+        expect(quantity.value).toMatch('2');
+        await user.click(decrementBtn);
+        expect(quantity.value).toMatch('1');
+    });
+
+    it("calls addToCart when add to cart button is clicked", async () => {
+        const onAddToCart = jest.fn();
+        const user = userEvent.setup();
+
+        render(<Item item={mockItem} addToCart={onAddToCart} />);
+        const item = screen.getByTestId('shop-item');
+
+        await user.hover(item);
+        let itemButtons = screen.queryAllByRole('button');
+        const addToCartBtn = itemButtons[2];
+
+        await user.click(addToCartBtn);
+        expect(onAddToCart).toBeCalledTimes(1);
+    });
 });
