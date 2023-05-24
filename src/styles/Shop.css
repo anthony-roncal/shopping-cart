@@ -59,17 +59,13 @@ h2 {
 }
 
 .item-form {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .item:hover {
     border: 1px solid lightgrey;
-}
-
-.item:hover .item-form {
-    display: flex;
 }
 
 .quantity > * {
@@ -87,9 +83,6 @@ h2 {
 
 .quantity > button:hover {
     background-color: #d1d5db;
-}
-
-.quantity > button:hover {
     cursor: pointer;
 }
 

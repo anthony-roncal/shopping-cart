@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 
 const Item = ({ item, addToCart }) => {
     const [quantity, setQuantity] = useState(1);
+    const [isHidden, setIsHidden] = useState(true);
 
     const handleInputChange = (e) => {
         setQuantity(e.target.value);
@@ -33,8 +34,16 @@ const Item = ({ item, addToCart }) => {
         addToCart(item, quantity);
     };
 
+    const handleMouseEnter = () => {
+        setIsHidden(false)
+    };
+    
+    const handleMouseLeave = () => {
+        setIsHidden(true)
+    };
+
     return (
-        <div className='item'>
+        <div className='item' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <img src={require(`../images/${item.img}.png`)} alt='img' />
             <div className="item-card">
                 <div className='item-info'>
@@ -42,14 +51,14 @@ const Item = ({ item, addToCart }) => {
                     <p className='item-price'>${item.price}</p>
                     <p className='item-company'>{item.company}</p>
                 </div>
-                <form className='item-form'>
+                {!isHidden && <form className='item-form'>
                     <div className="quantity">
                         <button type='button' onClick={handleClickDecrement}>-</button>
                         <input type='number' value={quantity} onChange={handleInputChange} onBlur={handleInputBlur} maxLength='2' />
                         <button type='button' onClick={handleClickIncrement}>+</button>
                     </div>
                     <button className='add-to-cart-btn' type='button' onClick={handleClickAddToCart}>Add to cart</button>
-                </form>
+                </form>}
             </div>
         </div>
     );

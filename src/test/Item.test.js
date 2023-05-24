@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import Item from '../components/Item';
 
 const mockItem = {
@@ -15,5 +16,10 @@ describe("Item component", () => {
         expect(screen.getByText('Flatlander').textContent).toMatch(/flatlander/i);
         expect(screen.getByText("PT's Coffee Roasting Co.").textContent).toMatch(/pt's coffee roasting co./i);
         expect(screen.getByText('$' + mockItem.price).textContent).toMatch('$' + mockItem.price.toString());
+        let itemButtons = screen.queryAllByRole('button');
+        itemButtons.forEach(button => {
+            expect(button).not.toBeInTheDocument();
+        });
+        expect(screen.queryByRole('input')).not.toBeInTheDocument();
     });
 });
